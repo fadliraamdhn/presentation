@@ -1,0 +1,27 @@
+<div class="col-md-10 p-4">
+    <div class="text-center">
+        <h1>Edit Your Project</h1>
+    </div>
+    <form action="/dashboard/edit-project/{{project.id}}" method="post" enctype="multipart/form-data" class="bg-white rounded px-4 py-5 shadow-sm">
+        <div class="mb-3">
+        <label for="" class="form-label">Name Project</label>
+            <input type="text" name="project" class="form-control" value="{{project.name}}">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Description</label>
+            <input type="text" name="description" class="form-control" value="{{project.description}}">
+        </div>
+                            
+        <div class="mb-3">
+            <div>
+                <label class="form-label">Tech Stack</label>
+                <input type="text" name="tech" class="form-control" placeholder="pisahkan menggunakan titik (.)">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Image</label>
+            <input type="file" name="image" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+</div>

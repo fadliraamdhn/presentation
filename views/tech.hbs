@@ -1,0 +1,59 @@
+<div class="col-md-10 p-4">
+    <div class="d-flex justify-content-between mb-4">
+        <h4>Tech</h4>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addTech">
+        + Add Tech
+        </button>
+    </div>
+
+    <div class="modal fade" id="addTech" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Project</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/dashboard/tech" method="post" enctype="multipart/form-data" class="p-4 bg-white rounded shadow-sm">
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Image Svg Only</label>
+                            <input type="file" name="image" class="form-control" accept=".svg">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Name Tech</label>
+                            <input type="text" name="tech" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-success">Add</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table bg-white border rounded">
+        <thead>
+            <tr>
+                <th>Image Path Name</th>
+                <th>Name Stack</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tech}}
+            <tr>
+                <td>{{path}}</td>
+                <td>{{name}}</td>
+                <td>
+                <form action="/dashboard/tech/{{id}}" method="post">
+                    <a href="/dashboard/edit-tech/{{id}}"><i class="edit bi bi-pencil"></i></a>
+                    <button class="btn btn-sm delete ms-2" type="submit"><i class="bi bi-trash"></i></button>
+                </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

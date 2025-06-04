@@ -1,0 +1,123 @@
+<body>
+    <main class="pt-5">
+        <section class="hero">
+            <div class="hero-container container-fluid my-lg-5 px-lg-5 py-lg-2 d-flex gap-5">
+                <div class="py-xl-5 px-xl-5 justify-content-center align-items-center">
+                    <img class="profile ms-lg-4" src="../../public/img/profile.jpg" alt="hero">
+                </div>
+                <div class="hero-description">
+                    <h1 class="fw-bolder">Hi, I'm Fadli 👋</h1>
+                    <h4 class="py-3 text-body-secondary">Indie Game & Full-Stack Developer</h3>
+                    <h6 class="text-body-secondary fw-normal lh-base">I build and ship digital products from scratch to production. Passionate about creating game based what i like and creating website that edgy and kalcer. With expertise in basic game concept for web both frontend and backend development, I handle everything from initial concept to deployment and maintenance.</h6>
+                    <div class="hero-location d-flex gap-2 mt-4">
+                        <i class="bi bi-geo-alt"></i>
+                        <p class="text-body-secondary ">Beji, Depok, Indonesia</p>
+                    </div>
+                    <div class="hero-work d-flex gap-2 align-items-center">
+                        <i style="font-size: 0.5rem;" class="bi bi-circle-fill text-success"></i>
+                        <span class="text-secondary">Available for new projects</span>
+                    </div>
+                    <div class="button-main d-flex gap-4">
+                        <button type="button" class="wa-button btn fw-medium mt-4"><i class="bi bi-whatsapp me-2"></i>Let's Talk</button>
+                        <button type="button" class="cv-button btn btn-dark fw-medium mt-4" id="cvbuttonbot"><i class="bi bi-file-earmark-arrow-down me-2"></i>Download CV</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="mx-lg-5">
+
+            <div class="container-fluid mx-lg-5">
+               <h3 class="fw-bold py-lg-3 fs-lg-2">Tech Stack - Tools I Use Everyday</h3> 
+            </div>
+
+            <div class="stack-slide py-3 d-flex ">
+                {{#each svg}}
+                <div class="css-logo d-flex flex-column gap-4 align-items-center">
+                    <img class="" src="public/uploads/{{path}}">
+                    <p class="text-secondary">{{name}}</p>
+                </div>
+                {{/each}}
+                {{#each svg}}
+                <div class="css-logo d-flex flex-column gap-4 align-items-center">
+                    <img class="" src="public/uploads/{{path}}">
+                    <p class="text-secondary">{{name}}</p>
+                </div>
+                {{/each}}
+                
+            </div>
+        </section>
+
+        <section id="experience" class="mx-lg-5 my-lg-3">
+            <div class="container-fluid mx-lg-5 py-lg-3">
+               <h3 class="fw-bold py-lg-3 fs-lg-2">Work Experience:</h3> 
+            </div>
+            <!-- Experienced Card -->
+            {{#each experience}}
+            <div class="container experience-container py-lg-2 mb-3">
+                <div class="experienced-card container d-flex gap-4 mt-lg-3 ps-lg-4">
+                    <div class="pt-lg-2">
+                        <img src="public/uploads/{{img}}" width="66">
+                    </div>
+                    <div class="summary-container ">
+                        <p style="font-size: 1.1rem; margin-bottom: 0;"  class="ps-lg-3 fw-semibold">{{position}}</p>
+                        <div style="font-size: 0.9rem;" class="ps-lg-3 d-flex justify-content-between">
+                            <p class="text-success">{{company}}</p>
+                            <p class="text-secondary">{{formatMonthYear start_date}} - {{formatMonthYear end_date}}</p>
+                        </div>
+                        <ul style="font-size: 0.9rem;" class="text-secondary d-flex flex-column gap-2">
+                            {{#each description}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                        <div style="font-size: 0.8rem;" class="stack-used d-flex gap-3 fw-medium text-secondary ps-lg-4 flex-wrap">
+                            {{#each tech}}
+                            <p>{{this}}</p>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </section>
+
+        <section id="projects" class="mx-lg-5 my-lg-5">
+            <div class="container-fluid mx-lg-5 py-lg-4">
+               <h3 class="fw-bold py-lg-3 fs-lg-2">My Projects:</h3> 
+            </div>
+
+            <div class="project-container container d-flex justify-content-between flex-wrap gap-4 mb-lg-4">
+                {{#each project}}
+                <div style="width: 48%;" class="card-project h-50">
+                    <div style="background-color: rgb(237, 241, 241); border-radius: 12px 12px 0 0;">
+                        <img src="../public/uploads/{{img}}" class="w-50" height="200" style="margin:auto; display: block;">
+                    </div>
+                    <div class="px-4 py-4 d-flex flex-column gap-2">
+                        <h5 class="fw-semibold fs-5">{{name}}</h5>
+                        <p style="font-size: 0.85rem;" class="text-body-secondary">{{description}}</p>
+                        <div style="font-size: 0.75rem;" class="stack-used d-flex gap-2 fw-medium text-secondary">
+                            {{#each tech}}
+                            <p>{{this}}</p>
+                            {{/each}}
+                        </div>
+                        <div class="d-flex gap-4">
+                            <p style="font-size: 0.78rem;" class="text-secondary"><i class="bi bi-github px-2"></i>Private Repository</p>
+                            <a style="font-size: 0.78rem; text-decoration: none;" href=""><i class="bi bi-box-arrow-up-right px-2"></i>Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+
+        <section class="end-text my-5 pt-5 container-sm align-items-center">
+            <h3 class="fw-bold fs-2 mt-4">Let's build something together</h3>
+            <p style="font-size: 0.88rem;" class="text-secondary mt-2">Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+            <div style="font-size: 0.88rem; justify-content: center;" class="contact-me d-flex gap-sm-3 mt-xl-4">
+                <p class="text-secondary"><i class="bi bi-envelope px-3"></i>fadli16ramadhan@gmail.com</p>
+                <p class="bridge">|</p>
+                <p class="text-secondary"><i class="bi bi-whatsapp px-3"></i>+62 895 367 800 905</p>
+            </div>
+        </section>
+    </main>
+</body>

@@ -1,0 +1,16 @@
+<div class="col-md-10 p-4">
+    <div class="text-center">
+        <h1>Edit Your Tech</h1>
+    </div>
+    <form action="/dashboard/edit-tech/{{tech.id}}" method="post" enctype="multipart/form-data" class="bg-white rounded px-4 py-5 shadow-sm">
+        <div class="mb-3">
+            <label for="image" class="form-label" class="fw-medium">Image Svg Only</label>
+            <input type="file" name="image" class="form-control" accept=".svg">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label" class="fw-medium"></label>
+            <input type="text" name="tech" class="form-control" value="{{tech.name}}">
+        </div>
+        <button type="submit" class="btn btn-success">Edit</button>
+    </form>
+</div>

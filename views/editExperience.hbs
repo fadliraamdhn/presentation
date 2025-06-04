@@ -1,0 +1,39 @@
+<div class="col-md-10 p-4">
+    <div class="text-center">
+        <h1>Edit Your Experience</h1>
+    </div>
+    <form action="/dashboard/edit-experience/{{experience.id}}" method="post" enctype="multipart/form-data" class="bg-white rounded px-4 py-5 shadow-sm">
+        <div class="mb-3">
+        <label for="" class="form-label">Position</label>
+            <input type="text" name="position" class="form-control" value="{{experience.position}}">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Company</label>
+            <input type="text" name="company" class="form-control" value="{{experience.company}}">
+        </div>
+                            
+        <div class="mb-3">
+            <div>
+                <label class="form-label">Start Date</label>
+                <input type="date" name="endDate" class="form-control">
+            </div>
+            <div>
+                <label class="form-label">End Date</label>
+                <input type="date" name="startDate" class="form-control">
+            </div>
+        </div>
+        <div>
+            <label class="form-label">Description</label>
+            <textarea placeholder="pisahkan menggunakan titik (.)" class="form-control" name="description" row="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Tech</label>
+            <textarea placeholder="pisahkan menggunakan titik (.)" name="tech" class="form-control" row="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Image</label>
+            <input type="file" name="image" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+</div>
