@@ -8,6 +8,6 @@ setTimeout(() => {
     if (flash) {
         flash.style.transition = 'opacity 1s';
         flash.style.opacity = '0';
-        setTimeout(() => flash.remove(), 1000);
+        setTimeout(() => flash.remove(), 2000);
     }
-}, 1500);
+}, 2000);

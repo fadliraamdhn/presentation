@@ -25,7 +25,8 @@ export const login = async (req, res) => {
     }
 
     req.session.user = {
-        name: user.email
+        name: user.username,
+        email: user.email
     };
 
     req.flash('success', 'Berhasil Login!');

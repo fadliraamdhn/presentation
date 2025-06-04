@@ -3,10 +3,11 @@ import upload from '../middleware/multerConfig.js';
 import { renderHomePage } from '../controllers/portofolioController.js';
 import { isAuthenticated, logout } from "../middleware/auth.js";
 import { renderLoginPage, login } from "../controllers/loginController.js"
-import { renderHomeDashboard } from '../controllers/homeDashboardController.js';
+import { renderHomeDashboard, updateProfile } from '../controllers/homeDashboardController.js';
 import { renderTechDashboard, addNewTech, deleteTech, renderEditTech, editTech } from '../controllers/techController.js';
 import { renderExperienceDashboard, addNewExperienced, deleteExperience, renderEditExperience, editExperience } from '../controllers/experienceController.js';
 import { renderProjectDashboard, addNewProject, deleteProject, renderEditProject, editProject } from '../controllers/projectController.js';
+import { register, renderRegister } from '../controllers/registerController.js';
 const router = Router();
 
 router.get('/', renderHomePage);
@@ -29,5 +30,8 @@ router.get('/dashboard/edit-experience/:id', renderEditExperience)
 router.post('/dashboard/edit-experience/:id', upload.single('image'), editExperience)
 router.get('/dashboard/edit-project/:id', renderEditProject)
 router.post('/dashboard/edit-project/:id', upload.single('image'), editProject)
+router.get('/register', renderRegister)
+router.post('/register', register)
+router.post('/dashboard', upload.single('image'), updateProfile)
 
 export default router;

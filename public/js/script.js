@@ -2,14 +2,6 @@ const toggleButton = document.getElementById("toggleMode");
 const htmlElement = document.documentElement;
 const themeIcon = document.getElementById("themeIcon");
 const navbar = document.getElementById("navbar");
-const downloadCv = document.getElementById("cvbutton");
-const cvBot = document.getElementById("cvbuttonbot");
-const experience1 = document.getElementById("experience1")
-const experience2 = document.getElementById("experience2")
-const experience3 = document.getElementById("experience3")
-const imgBackgroundLight = document.getElementsByClassName(".lightmode")
-const imgBackgroundDark = document.getElementsByClassName(".darkmode")
-
 
 function updateIcon(theme) {
     if (theme === "dark") {
@@ -40,7 +32,6 @@ function updateIcon(theme) {
         navbar.classList.add("bg-white");
     }
 }
-
 
 toggleButton.addEventListener("click", () => {
     const currentTheme = htmlElement.getAttribute("data-bs-theme");

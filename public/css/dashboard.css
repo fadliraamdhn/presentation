@@ -81,7 +81,6 @@ header {
 }
 
 h1.hand {
-  font-size: 150px;
   animation: wave 5s infinite;
 }
 
@@ -93,4 +92,9 @@ h1.hand {
   60% { transform: rotate(-4deg); }
   75% { transform: rotate(10deg); }
   100% { transform: rotate(0deg); }
+}
+
+img {
+  border-radius: 50%;
+  border: solid black 3px;
 }

@@ -38,3 +38,7 @@ body, html {
 .flash-error {
   background-color: rgba(228, 25, 25, 0.884);
 }
+
+.flash-success {
+  background-color: rgba(45, 221, 45, 0.884);
+}

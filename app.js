@@ -27,11 +27,7 @@ app.use((req, res, next) => {
 });
 
 hbs.registerHelper('formatMonthYear', function(dateStr) {
-  if (!dateStr) return ''; // handle null/undefined
-
   const date = new Date(dateStr);
-  if (isNaN(date)) return ''; // invalid date check
-
   return date.toLocaleDateString('id-ID', { year: 'numeric', month: 'long' });
 });
 

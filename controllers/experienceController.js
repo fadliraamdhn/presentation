@@ -16,10 +16,7 @@ export const renderExperienceDashboard = async (req, res) => {
 
 export const addNewExperienced = async (req, res) => {
     let {position, company, startDate, endDate, description, tech} = req.body
-
     const filename = req.file.filename;
-
-    console.log(req.body);
 
     const arrDesc = String(description).split('.').map(s => s.trim()).filter(s => s.length > 0);
 
